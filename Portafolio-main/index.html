@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Samy Sierra Suarez</title>
+    <style>
+      /* Ocultar el cursor por defecto en toda la aplicación */
+      body, a, button, [role="button"], input, textarea {
+        cursor: none !important;
+      }
+
+      .balon {
+        width: 24px;
+        height: 24px;
+        background: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none; /* Evita que el div bloquee clics en otros elementos */
+        z-index: 99999;
+        border: 1.5px solid #000;
+        /* Patrón de balón de fútbol usando gradientes */
+        background-image: 
+          radial-gradient(circle at 50% 50%, #000 22%, transparent 23%),
+          radial-gradient(circle at 0% 0%, #000 22%, transparent 23%),
+          radial-gradient(circle at 100% 0%, #000 22%, transparent 23%),
+          radial-gradient(circle at 0% 100%, #000 22%, transparent 23%),
+          radial-gradient(circle at 100% 100%, #000 22%, transparent 23%);
+        background-size: 14px 14px;
+        /* Centrar el balón exactamente en la punta del puntero */
+        transform: translate(-50%, -50%);
+        /* Efecto de inercia: el balón sigue al mouse con un ligero retraso */
+        transition: left 0.12s ease-out, top 0.12s ease-out;
+        /* Animación de rotación constante */
+        animation: rotate-ball 4s linear infinite;
+      }
+
+      @keyframes rotate-ball {
+        from {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="balon"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

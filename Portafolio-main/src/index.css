@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-accent: "Lexend", sans-serif;
+
+  --color-brand-cyan: #00f0ff;
+  --color-brand-deep: #051424;
+  --color-brand-surface: #122131;
+  --color-brand-high: #1c2b3c;
+  --color-brand-highest: #273647;
+
+  --color-primary: #dbfcff;
+  --color-on-background: #d4e4fa;
+  --color-on-surface: #d4e4fa;
+  --color-secondary-container: #173bab;
+
+  --radius-scout: 0.25rem;
+}
+
+.cursor {
+
+  width: 10px;
+  height: 10px;
+  border: 10px solid #ffffff;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  
+}
+@layer base {
+  body {
+    @apply bg-brand-deep text-on-background selection:bg-brand-cyan selection:text-brand-deep;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply uppercase tracking-tight;
+  }
+}
+
+.glass-panel {
+  background: rgba(18, 33, 49, 0.6);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 240, 255, 0.2);
+  border-left: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.bloom-effect {
+  filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.4));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-brand-deep;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-highest rounded-full border-2 border-brand-deep;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-cyan/50;
+}
