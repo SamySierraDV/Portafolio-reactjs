@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'; // Asegúrate de usar framer-motion o motion/react consistentemente
+import { motion } from 'motion/react'; 
 import { useMemo } from 'react';
 import { LineChart, BarChart, Activity, Zap, History, Database, Cloud, Code2, Globe, Shield, CreditCard, Cpu, Lightbulb, Sparkles, Users, Handshake, Brain, Scale, Rocket, BookOpen } from 'lucide-react';
 import { cn } from '../../lib/utils';

@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-import { Layers, Code2, Globe, Database, Cpu, Cloud, TrendingUp, History, Terminal, Copy, Check } from 'lucide-react';
+import { Layers, Code2, Globe, Database, Cpu, Cloud, TrendingUp, History, Terminal, Copy, Check, LucideIcon } from 'lucide-react';
 import { motion } from 'motion/react';
 import { cn } from '../../lib/utils';
 import profilePhoto from '../../lib/images/foto-portafolio.webp';
@@ -13,7 +13,7 @@ const StatCard = ({ label, value, sublabel }: { label: string; value: string; su
   </div>
 );
 
-const TacticalItem = ({ title, desc, level, icon: Icon }: { title: string; desc: string; level: string, icon: any }) => (
+const TacticalItem = ({ title, desc, level, icon: Icon }: { title: string; desc: string; level: string, icon: LucideIcon }) => (
   <div className="flex items-center justify-between p-4 bg-brand-surface rounded-lg border border-brand-cyan/10 hover:border-brand-cyan/40 transition-all group">
     <div className="flex items-center gap-4">
       <div className="p-2 bg-brand-deep rounded border border-brand-cyan/20 text-brand-cyan group-hover:scale-110 transition-transform">
