@@ -54,6 +54,9 @@ export default function App() {
     <div className="flex min-h-screen bg-brand-deep text-on-background selection:bg-brand-cyan selection:text-brand-deep overflow-hidden">
       <Sidebar activeScreen={currentScreen} onNavigate={setCurrentScreen} />
       
+      {/* Elemento seguidor del cursor (Balón) */}
+      <div className="balon fixed w-4 h-4 bg-brand-cyan rounded-full pointer-events-none z-[9999] blur-[2px] shadow-[0_0_15px_#00f0ff] -translate-x-1/2 -translate-y-1/2 hidden md:block" />
+
       <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden">
         <Navbar currentScreen={currentScreen} onNavigate={setCurrentScreen} />
         
